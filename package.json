@@ -1,0 +1,22 @@
+{
+  "name": "ilplanit-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilabacheuski/ilplanit-server.git"
+  },
+  "author": "Ilya Labacheuski <ilya.labacheuski@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ilabacheuski/ilplanit-server/issues"
+  },
+  "homepage": "https://github.com/ilabacheuski/ilplanit-server#readme",
+  "devDependencies": {
+    "jest": "^23.4.1"
+  }
+}
