@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/ilabacheuski/ilplanit-server#readme",
   "devDependencies": {
-    "jest": "^23.4.1"
+    "@types/graphql": "^0.13.3",
+    "@types/jest": "^23.3.0",
+    "@types/node": "^10.5.2",
+    "jest": "^23.4.1",
+    "ts-jest": "^23.0.0",
+    "tslint": "^5.11.0"
   }
 }
