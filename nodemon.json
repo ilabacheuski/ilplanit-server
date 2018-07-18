@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "ignore": ["*.test.js", "fixtures/*"],
+  "execMap": {},
+  "watch": ["src"],
+  "exec": "npm start",
+  "ext": "ts"
+}

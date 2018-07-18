@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config ./jest.config.js",
     "clean": "rm -rf ./build",
     "compile": "tsc -p .",
-    "lint": "tslint -p . -c tslint.json",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js",
     "fix": "",
-    "prepare": "npm run compile"
+    "lint": "tslint -p . -c tslint.json",
+    "prepare": "npm run compile",
+    "start": "ts-node ./src/index.ts",
+    "test": "jest --config ./jest.config.js",
+    "test:watch": "jest --watch --config ./jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -26,13 +29,18 @@
     "@types/jest": "^23.3.0",
     "@types/node": "^10.5.2",
     "jest": "^23.4.1",
+    "nodemon": "^1.18.3",
     "ts-jest": "^23.0.0",
+    "ts-node": "^7.0.0",
     "tslint": "^5.11.0",
     "tslint-config-standard": "^7.1.0",
     "typescript": "~2.8.0"
   },
   "dependencies": {
     "@types/koa": "^2.0.46",
+    "apollo-server": "^2.0.0-rc.12",
+    "apollo-server-koa": "^2.0.0-rc.12",
+    "graphql": "^0.13.2",
     "koa": "^2.5.2"
   }
 }
