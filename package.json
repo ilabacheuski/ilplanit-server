@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf ./build",
     "compile": "tsc -p .",
-    "dev": "node ./node_modules/nodemon/bin/nodemon.js",
+    "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/server.ts",
     "fix": "",
     "lint": "tslint -p . -c tslint.json",
     "prepare": "npm run compile",
@@ -27,6 +27,8 @@
   "devDependencies": {
     "@types/graphql": "^0.13.3",
     "@types/jest": "^23.3.0",
+    "@types/koa": "^2.0.46",
+    "@types/koa-router": "^7.0.30",
     "@types/node": "^10.5.2",
     "jest": "^23.4.1",
     "nodemon": "^1.18.3",
@@ -37,10 +39,9 @@
     "typescript": "~2.8.0"
   },
   "dependencies": {
-    "@types/koa": "^2.0.46",
-    "apollo-server": "^2.0.0-rc.12",
     "apollo-server-koa": "^2.0.0-rc.12",
     "graphql": "^0.13.2",
-    "koa": "^2.5.2"
+    "koa": "^2.5.2",
+    "koa-router": "^7.4.0"
   }
 }
