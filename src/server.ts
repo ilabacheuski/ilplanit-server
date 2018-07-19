@@ -1,6 +1,5 @@
-import { ApolloServer, gql } from 'apollo-server-koa'
-import Koa from 'koa'
-import Router from 'koa-router'
+import { ApolloServer, gql } from 'apollo-server-express'
+import express from 'express'
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
@@ -17,15 +16,8 @@ const resolvers = {
 }
 
 const server = new ApolloServer({ typeDefs, resolvers })
-
-const app = new Koa()
-const router = new Router()
-router.get('/*', async ctx => {
-  ctx.body = 'Hello World!'
-})
-app.use(router.routes())
-
-// server.applyMiddleware({ app })
+const app = express()
+server.applyMiddleware({ app })
 
 // tslint:disable-next-line no-console
 app.listen({ port: 4000 }, () => console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`))
