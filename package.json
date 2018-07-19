@@ -9,7 +9,6 @@
     "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/server.ts",
     "fix": "",
     "lint": "tslint -p . -c tslint.json",
-    "prepare": "npm run compile",
     "start": "ts-node ./src/index.ts",
     "test": "jest --config ./jest.config.js",
     "test:watch": "jest --watch --config ./jest.config.js"
