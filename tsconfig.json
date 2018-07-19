@@ -23,5 +23,6 @@
     "target": "ES2018",
     "types": ["node", "jest"] /* Type declaration files to be included in compilation. */
   },
-  "include": ["src/*.ts", "src/**/*.ts", "test/*.ts", "test/**/*.ts"]
+  "include": ["src/*.ts", "src/**/*.ts", "test/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules/**"]
 }
